@@ -31,8 +31,8 @@ const quizSchema = mongoose.Schema(
     },
     submitSystem: {
       type: String,
-      enum: ["Single Answer", "All Answer"],
-      default: "All Answer",
+      enum: ["Single Answer", "All Answers"],
+      default: "All Answers",
     },
     ansShow: {
       type: String,
