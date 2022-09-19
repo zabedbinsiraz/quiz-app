@@ -20,10 +20,12 @@ const addUserValidators = [
     .custom(async (value) => {
       try {
         const user = await User.findOne({ email: value });
+        console.log(user)
         if (user) {
           throw createError("Email already is use!");
         }
       } catch (err) {
+        console.log(err)
         throw createError(err.message);
       }
     }),
